@@ -22,18 +22,18 @@ consumer.on('message', (message) => {
         port: 465,
         secure: true,
         auth: {
-            user: 'picklerickcsc667@gmail.com',
-            pass: 'csc667spring2020',
+            user: '',
+            pass: '',
         }
     })
 
     let mailOptions = {
         from: {
             name: 'Pickle Rick',
-            address: 'picklerickcsc667@gmail.com',
+            address: '',
         },
         to: `${info.email}`,
-        replyTo: 'picklerickcsc667@gmail.com',
+        replyTo: '',  //email address removed 
         subject: 'Thank You for Your Order',
         text: 'message',
         html: `<p>Thank you for purchasing: </p></br>

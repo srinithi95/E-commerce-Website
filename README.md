@@ -1,2 +1,3 @@
-# COVID-19-essentials
-e-commerce website to buy all the essentials for COVID-19
+# final-project-pickle-rick
+final-project-pickle-rick created by GitHub Classroom
+1.Button on homepage to show purchase history.

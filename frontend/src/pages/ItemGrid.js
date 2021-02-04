@@ -14,7 +14,7 @@ const ItemGrid = ({ inventory, dispatch, ws }) => {
                             <Link
                                 to='/item'
                                 onClick={() => {dispatch(selectItem(i))
-                                    //console.log(item);
+                                    
                                     const dataToSend = {
                                         type:'UPDATE_COUNT',
                                         id: item._id,

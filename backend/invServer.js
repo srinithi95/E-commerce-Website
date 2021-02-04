@@ -9,10 +9,10 @@ app.use(bodyParser());
 app.use(cors());
 
 // Connection URL
-const url = 'mongodb+srv://dmitry:sfsu667@cluster0-mxobn.mongodb.net/test?retryWrites=true&w=majority';
+const url = 'mongodb+srv://Sri:test@cluster0.jht7t.mongodb.net/ecommerce?retryWrites=true&w=majority';
 
 // Database Name
-const dbName = 'sfsu667';
+const dbName = 'ecommerce';
 
 // Create a new MongoClient
 const client = new MongoClient(url);

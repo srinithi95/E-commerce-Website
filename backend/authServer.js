@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser());
 
 // Connection URL
-const url = 'mongodb+srv://dmitry:sfsu667@cluster0-mxobn.mongodb.net/test?retryWrites=true&w=majority';
+const url = 'mongodb+srv://Sri:test@cluster0.jht7t.mongodb.net/ecommerce?retryWrites=true&w=majority';
 
 // Database Name
 const dbName = 'sfsu667';
@@ -33,7 +33,7 @@ client.connect(err => {
       });
       console.log('ERROR: No password has been provided');
     }
-    db.collection('finalUserInfo')
+    db.collection('UserInfo')
       .findOne({
         userId: req.body.userId
       }, function(err, result){
@@ -72,7 +72,7 @@ client.connect(err => {
         valid: false
       });
     }
-    db.collection('finalUserInfo')
+    db.collection('UserInfo')
       .findOne({
         email: req.body.email
       })

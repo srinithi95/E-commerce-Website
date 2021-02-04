@@ -8,9 +8,9 @@ const clientr=redis.createClient();
 const port = 3006;
 var bodyParser = require('body-parser');
 app.use(bodyParser());
-const url = 'mongodb+srv://dmitry:sfsu667@cluster0-mxobn.mongodb.net/test?retryWrites=true&w=majority';
+const url = 'mongodb+srv://Sri:<password>@cluster0.jht7t.mongodb.net/ecommerce?retryWrites=true&w=majority';
 
-const dbName = 'sfsu667';
+const dbName = 'ecommerce';
 
 const client = new MongoClient(url);
 
@@ -24,7 +24,7 @@ client.connect(err => {
 const db=client.db(dbName);
 
 app.post('/api/receipts/get', (req,res) => {
-      db.collection('finalUserInfo')
+      db.collection('UserInfo')
         .findOne({
             email:req.body.email
         })
@@ -46,13 +46,13 @@ app.post('/api/receipts/create',(req,res)=>{
     let receipt = [];
     console.log(items_purchased[0][0].title);
     receipt.push(receipt_id,date,totalPrice,items_purchased);
-    db.collection('finalUserInfo')
+    db.collection('UserInfo')
     .findOne({
         email:req.body.email
     })
     .then(doc=>{
         if(doc.receipts){
-            db.collection('finalUserInfo')
+            db.collection('UserInfo')
             .updateOne(
                 {
                     email:req.body.email},
@@ -73,7 +73,7 @@ app.post('/api/receipts/create',(req,res)=>{
              ) 
         }
         else{
-             db.collection('finalUserInfo')
+             db.collection('UserInfo')
               .updateOne(
                 {email:req.body.email},
                 {

@@ -1,6 +1,6 @@
 E-Commerce Website
 
-E-commerce website is developed using Microservice architecture. 
+Developed using Microservice architecture. 
 1)The front-end is developed with React JS and Redux.
 2)The backend Rest APIs are developed using Express.
 3)Implemented Reverse proxy by using a single gateway to call all the backend services. 
